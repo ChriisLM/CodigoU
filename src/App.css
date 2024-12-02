@@ -1,0 +1,10 @@
+*{
+  margin: 0;
+  box-sizing: border-box;
+  --background-color-primary: #212121;
+  --background-color-secundary: #252525;
+  --background-color-tertiary: #454545;
+  --color-black: #0C0C0C;
+  --color-white: #fff;
+  --color-secundary: #a7a7a7;
+}
