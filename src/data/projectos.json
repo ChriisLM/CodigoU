@@ -1,86 +1,73 @@
 [
   {
-    "id": 1,
+    "id": "CE-1",
     "materia": "Circuitos Eléctricos",
-    "proyectos": [
-      {
-        "id": "CE-1",
-        "nombre": "Análisis de un circuito RC",
-        "etiquetas": [
-          "circuitos",
-          "simulación",
-          "SPICE"
-        ],
-        "descripcion": "Simulación de un circuito RC en LTspice",
-        "imagen": "circuito_rc.png"
-      },
-      {
-        "id": "CE-2",
-        "nombre": "Diseño de un filtro pasabajos",
-        "etiquetas": [
-          "filtros",
-          "diseño",
-          "MATLAB"
-        ],
-        "descripcion": "Diseño de un filtro pasabajos utilizando MATLAB",
-        "imagen": "filtro_pasabajos.png"
-      }
-    ]
+    "nombre": "Análisis de un circuito RC",
+    "etiquetas": [
+      "circuitos",
+      "simulación",
+      "SPICE"
+    ],
+    "descripcion": "Simulación de un circuito RC en LTspice",
+    "imagen": "circuito_rc.png"
   },
   {
-    "id": 2,
+    "id": "CE-2",
+    "materia": "Circuitos Eléctricos",
+    "nombre": "Diseño de un filtro pasabajos",
+    "etiquetas": [
+      "filtros",
+      "diseño",
+      "MATLAB"
+    ],
+    "descripcion": "Diseño de un filtro pasabajos utilizando MATLAB",
+    "imagen": "filtro_pasabajos.png"
+  },
+  {
+    "id": "SS-1",
     "materia": "Señales y Sistemas",
-    "proyectos": [
-      {
-        "id": "SS-1",
-        "nombre": "Análisis de Fourier de una señal",
-        "etiquetas": [
-          "Fourier",
-          "análisis",
-          "Python"
-        ],
-        "descripcion": "Análisis de Fourier de una señal utilizando NumPy",
-        "imagen": "fourier_transform.png"
-      },
-      {
-        "id": "SS-2",
-        "nombre": "Diseño de un filtro digital",
-        "etiquetas": [
-          "filtros",
-          "diseño digital",
-          "MATLAB"
-        ],
-        "descripcion": "Diseño de un filtro digital utilizando MATLAB",
-        "imagen": "filtro_digital.png"
-      },
-      {
-        "id": "SS-3",
-        "nombre": "Modulación de señales",
-        "etiquetas": [
-          "modulación",
-          "comunicaciones",
-          "GNU Radio"
-        ],
-        "descripcion": "Simulación de diferentes tipos de modulación en GNU Radio",
-        "imagen": "modulacion.png"
-      }
-    ]
+    "nombre": "Análisis de Fourier de una señal",
+    "etiquetas": [
+      "Fourier",
+      "análisis",
+      "Python"
+    ],
+    "descripcion": "Análisis de Fourier de una señal utilizando NumPy",
+    "imagen": "fourier_transform.png"
   },
   {
-    "id": 3,
+    "id": "SS-2",
+    "materia": "Señales y Sistemas",
+    "nombre": "Diseño de un filtro digital",
+    "etiquetas": [
+      "filtros",
+      "diseño digital",
+      "MATLAB"
+    ],
+    "descripcion": "Diseño de un filtro digital utilizando MATLAB",
+    "imagen": "filtro_digital.png"
+  },
+  {
+    "id": "SS-3",
+    "materia": "Señales y Sistemas",
+    "nombre": "Modulación de señales",
+    "etiquetas": [
+      "modulación",
+      "comunicaciones"
+    ],
+    "descripcion": "Simulación de diferentes tipos de modulación en GNU Radio",
+    "imagen": "modulacion.png"
+  },
+  {
+    "id": "EP-1",
     "materia": "Electrónica de Potencia",
-    "proyectos": [
-      {
-        "id": "EP-1",
-        "nombre": "Diseño de un convertidor DC-DC",
-        "etiquetas": [
-          "convertidores",
-          "diseño",
-          "Proteus"
-        ],
-        "descripcion": "Diseño de un convertidor DC-DC buck en Proteus",
-        "imagen": "convertidor_dc_dc.png"
-      }
-    ]
+    "nombre": "Diseño de un convertidor DC-DC",
+    "etiquetas": [
+      "convertidores",
+      "diseño",
+      "Proteus"
+    ],
+    "descripcion": "Diseño de un convertidor DC-DC buck en Proteus",
+    "imagen": "convertidor_dc_dc.png"
   }
 ]
