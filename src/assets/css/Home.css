@@ -1,0 +1,8 @@
+
+.materias__list{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  padding: 4rem;
+  gap: 4rem;
+}
