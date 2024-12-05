@@ -1,3 +1,4 @@
+import { Navigate } from "react-router"
 import "../assets/css/CardProyecto.css"
 
 type Proyectoinfo = {
@@ -14,8 +15,13 @@ interface Props{
 }
 
 export function CardProyecto ({proyecto}:Props) {
+
+  const handleProjectView = () => {
+    <Navigate to={`/${proyecto.materia}:${proyecto.id}`}/>
+  }
+
   return (
-    <article className="project__container">
+    <article onClick={() => handleProjectView()} className="project__container">
       <div className="project__image-container">
         <img src={proyecto.imagen} alt={proyecto.nombre} className="proyecto__image"/>
       </div>
