@@ -4,7 +4,7 @@ import { Board } from "../components/SimuladorCircuitos/Board";
 
 export function SimuladorCicuitos () {
   return (
-    <section>
+    <section className="simulador">
       <Board/>
     </section>
   );

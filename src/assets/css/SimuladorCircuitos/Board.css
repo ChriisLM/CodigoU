@@ -1,0 +1,10 @@
+.board__container{
+  width: 90%;
+  height: 500px;
+  margin-block: 2rem;
+  border: 1px solid black;
+  position: relative;
+  background-image: url("../../img/board-background.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+}
