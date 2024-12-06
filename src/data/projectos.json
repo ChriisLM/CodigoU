@@ -2,13 +2,12 @@
   {
     "id": "CE-1",
     "materia": "Circuitos Eléctricos",
-    "nombre": "Análisis de un circuito RC",
+    "nombre": "Simulador de Circuitos Electricos",
     "etiquetas": [
       "circuitos",
-      "simulación",
-      "SPICE"
+      "simulación"
     ],
-    "descripcion": "Simulación de un circuito RC en LTspice",
+    "descripcion": "Simulación basico de circuitos ",
     "imagen": "circuito_rc.png"
   },
   {
