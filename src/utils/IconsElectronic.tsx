@@ -106,3 +106,140 @@ export function SwitchOpen(props: Props) {
     </svg>
   );
 }
+
+export function SwitchClosed(props: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={50}
+      height={50}
+      viewBox="98.912 194.552 101.394 11.207"
+      {...props}
+    >
+      <path
+        d="m98.912 199.747 26.638.253"
+        style={{
+          fill: "#d8d8d8",
+          stroke: "#ffffff",
+          strokeWidth: 4,
+        }}
+      />
+      <ellipse
+        cx={130.399}
+        cy={200.155}
+        rx={5.87}
+        ry={5.603}
+        style={{
+          strokeWidth: 4,
+          stroke: "#ffffff",
+          fill: "rgba(198,198,198,.224)",
+        }}
+      />
+      <ellipse
+        cx={174.158}
+        cy={200.156}
+        rx={5.87}
+        ry={5.603}
+        style={{
+          stroke: "#ffffff",
+          strokeWidth: 4,
+          fill: "rgba(198,198,198,.26)",
+        }}
+      />
+      <path
+        d="m200.306 199.888-20.279.112M136.76 200h30.422"
+        style={{
+          fill: "#d8d8d8",
+          stroke: "#ffffff",
+          strokeWidth: 4,
+        }}
+      />
+    </svg>
+  );
+}
+
+export function Amperemeter(props: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={64.679}
+      height={36.136}
+      viewBox="102.849 182.258 64.679 36.136"
+      {...props}
+    >
+      <path
+        d="M102.849 200h13.748M167.528 200h-14.142"
+        style={{
+          fill: "#ffffff",
+          stroke: "#ffffff",
+          strokeWidth: 2,
+        }}
+      />
+      <ellipse
+        cx={135.168}
+        cy={200.326}
+        rx={17.864}
+        ry={18.068}
+        style={{
+          fill: "#d8d8d8",
+          stroke: "#ffffff",
+        }}
+      />
+      <text
+        x={125.871}
+        y={209.499}
+        style={{
+          whiteSpace: "pre",
+          fill: "#333",
+          fontFamily: "Arial,sans-serif",
+          fontSize: 28,
+        }}
+      >
+        {"A"}
+      </text>
+    </svg>
+  );
+}
+
+export function Voltmeter(props: Props) {
+  return (
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width={64.679}
+      height={36.136}
+      viewBox="102.849 182.258 64.679 36.136"
+      {...props}
+    >
+      <path
+        d="M102.849 200h13.748M167.528 200h-14.142"
+        style={{
+          fill: "#d8d8d8",
+          stroke: "#ffffff",
+          strokeWidth: 2,
+        }}
+      />
+      <ellipse
+        cx={135.168}
+        cy={200.326}
+        rx={17.864}
+        ry={18.068}
+        style={{
+          fill: "#d8d8d8",
+          stroke: "#ffffff",
+        }}
+      />
+      <text
+        x={125.871}
+        y={211.609}
+        style={{
+          whiteSpace: "pre",
+          fill: "#333",
+          fontFamily: "Arial,sans-serif",
+          fontSize: 28,
+        }}
+      >
+        {"V"}
+      </text>
+    </svg>
+  );
+}
