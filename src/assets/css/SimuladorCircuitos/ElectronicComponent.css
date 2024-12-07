@@ -1,0 +1,20 @@
+.electronic-component{
+  display: flex;
+  align-items: center;
+}
+
+.conector__line{
+  height: 2px;
+  background: #ffffff;
+  width: 10px;
+  margin: 0;
+  padding: 0;
+}
+
+.conector__line--left{
+
+}
+
+.conector__line--right{
+
+}
