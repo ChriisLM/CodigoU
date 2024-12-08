@@ -1,21 +1,27 @@
-import "../../assets/css/SimuladorCircuitos/SiderBar.css"
-import { Amperemeter, DCPower, Resistor, SwitchClosed, SwitchOpen, Voltmeter } from "../../utils/IconsElectronic";
+import "../../assets/css/SimuladorCircuitos/SideBar.css"
+import { Amperemeter, DCPower, Resistor, SwitchOpen, Voltmeter } from "../../utils/IconsElectronic";
 import { ElectronicComponent } from "./ElectronicComponent";
 
-export function SideBar () {
+interface Props {
+  addComponents: any
+}
+
+export function SideBar ({addComponents}: Props) {
+  const electronicComponents = [
+    {type: "rtr",Component : Resistor},
+    {type: "pdc",Component: DCPower},
+    {type: "swto",Component: SwitchOpen},
+    {type: "amp",Component: Amperemeter},
+    {type: "vlt",Component: Voltmeter}
+  ]
   return (
     <div className="sidebar">
-      <ElectronicComponent Component={Resistor}/>
-      <hr className="sidebar__divider"/>
-      <ElectronicComponent Component={DCPower}/>
-      <hr className="sidebar__divider"/>
-      <ElectronicComponent Component={SwitchOpen}/>
-      <hr className="sidebar__divider"/>
-      <ElectronicComponent Component={SwitchClosed}/>
-      <hr className="sidebar__divider"/>
-      <ElectronicComponent Component={Amperemeter}/>
-      <hr className="sidebar__divider"/>
-      <ElectronicComponent Component={Voltmeter}/>
+      {electronicComponents.map(({type,Component},index) => (
+        <div key={index} className="sidebar__item">
+          <ElectronicComponent onclick={() => addComponents({type,Component})} Component={Component} inBoard={false}/>
+          <hr className="sidebar__divider"/>
+        </div>
+      ))}
     </div>
   );
 };
