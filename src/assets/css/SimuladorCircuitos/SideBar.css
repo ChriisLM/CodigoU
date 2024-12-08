@@ -1,0 +1,28 @@
+.sidebar{
+  height: 100%;
+  width: 90px;
+  background-color: rgb(255 255 255 / 90%);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-block: 1.5rem;
+}
+
+.sidebar__item{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.sidebar__item > .electronic-component > svg > path{
+  stroke: white;
+}
+
+.sidebar__divider{
+  width: 80%;
+  margin-block: .5rem;
+  font-weight: 800;
+}
