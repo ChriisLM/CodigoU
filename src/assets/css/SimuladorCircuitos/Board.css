@@ -1,8 +1,10 @@
-.board{
+.board {
   margin-block: 2rem;
+  display: flex;
+  flex-direction: row-reverse;
 }
 
-.board__container{
+.board__container {
   width: 90%;
   height: 500px;
   margin-block: 2rem;

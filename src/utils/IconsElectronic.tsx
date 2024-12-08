@@ -16,7 +16,7 @@ export function Resistor(props: Props) {
         d="m100 299.989 29.464.011 40.994-100 29.618 200 42.122-200 37.151 200L316.5 200l36.881 200 31.017-100h29.694"
         style={{
           fill: "none",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 14,
           strokeLinecap: "round",
         }}
@@ -37,8 +37,8 @@ export function DCPower(props: Props) {
       <path
         d="M118.43 157.304h26.236M145.663 100v112.811M164.152 131.088l-.17 53.275M185.185 156.9l-21.033.404M123.868 114.529h14.464M130.945 108.066v13.133M164.576 115.592h12.561"
         style={{
-          fill: "#ffffff",
-          stroke: "#ffffff",
+          fill: "#000000",
+          stroke: "#000000",
           strokeWidth: 5,
           strokeLinecap: "round",
         }}
@@ -60,7 +60,7 @@ export function SwitchOpen(props: Props) {
         d="m98.912 199.747 26.638.253"
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
         }}
       />
@@ -71,7 +71,7 @@ export function SwitchOpen(props: Props) {
         ry={5.603}
         style={{
           strokeWidth: 4,
-          stroke: "#ffffff",
+          stroke: "#000000",
           fill: "rgba(198,198,198,.224)",
         }}
       />
@@ -81,7 +81,7 @@ export function SwitchOpen(props: Props) {
         rx={5.87}
         ry={5.603}
         style={{
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
           fill: "rgba(198,198,198,.26)",
         }}
@@ -90,7 +90,7 @@ export function SwitchOpen(props: Props) {
         d="m200.306 199.888-20.279.112M133.6 195.035l26.149-21.829"
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
         }}
       />
@@ -120,7 +120,7 @@ export function SwitchClosed(props: Props) {
         d="m98.912 199.747 26.638.253"
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
         }}
       />
@@ -131,7 +131,7 @@ export function SwitchClosed(props: Props) {
         ry={5.603}
         style={{
           strokeWidth: 4,
-          stroke: "#ffffff",
+          stroke: "#000000",
           fill: "rgba(198,198,198,.224)",
         }}
       />
@@ -141,7 +141,7 @@ export function SwitchClosed(props: Props) {
         rx={5.87}
         ry={5.603}
         style={{
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
           fill: "rgba(198,198,198,.26)",
         }}
@@ -150,7 +150,7 @@ export function SwitchClosed(props: Props) {
         d="m200.306 199.888-20.279.112M136.76 200h30.422"
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 4,
         }}
       />
@@ -162,16 +162,16 @@ export function Amperemeter(props: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={64.679}
-      height={36.136}
+      width={50}
+      height={50}
       viewBox="102.849 182.258 64.679 36.136"
       {...props}
     >
       <path
         d="M102.849 200h13.748M167.528 200h-14.142"
         style={{
-          fill: "#ffffff",
-          stroke: "#ffffff",
+          fill: "#000000",
+          stroke: "#000000",
           strokeWidth: 2,
         }}
       />
@@ -182,7 +182,8 @@ export function Amperemeter(props: Props) {
         ry={18.068}
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
+          strokeWidth: 2,
         }}
       />
       <text
@@ -205,8 +206,8 @@ export function Voltmeter(props: Props) {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
-      width={64.679}
-      height={36.136}
+      width={50}
+      height={50}
       viewBox="102.849 182.258 64.679 36.136"
       {...props}
     >
@@ -214,7 +215,7 @@ export function Voltmeter(props: Props) {
         d="M102.849 200h13.748M167.528 200h-14.142"
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
           strokeWidth: 2,
         }}
       />
@@ -225,7 +226,8 @@ export function Voltmeter(props: Props) {
         ry={18.068}
         style={{
           fill: "#d8d8d8",
-          stroke: "#ffffff",
+          stroke: "#000000",
+          strokeWidth: 2,
         }}
       />
       <text
