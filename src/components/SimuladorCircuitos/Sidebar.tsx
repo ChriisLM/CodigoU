@@ -18,7 +18,7 @@ export function SideBar ({addComponents}: Props) {
     <div className="sidebar">
       {electronicComponents.map(({type,Component},index) => (
         <div key={index} className="sidebar__item">
-          <ElectronicComponent onclick={() => addComponents({type,Component})} Component={Component} inBoard={false}/>
+          <ElectronicComponent onclick={() => addComponents(type,Component)} Component={Component} inBoard={false}/>
           <hr className="sidebar__divider"/>
         </div>
       ))}
