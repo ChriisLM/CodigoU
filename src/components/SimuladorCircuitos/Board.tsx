@@ -14,6 +14,10 @@ interface Component {
   Component: React.ElementType;
   x: number;
   y: number;
+  valorResitencia?: string
+  valorFuente?: string
+  ValorVoltaje?: string
+  ValorCorriente?: string
 }
 
 const initialComponents: Component[] = [];
@@ -33,6 +37,8 @@ export function Board() {
       Component,
       x: 0,
       y: 0,
+      ...(type === "rtr" ? { ValorResistencia: "1K" } : {}),
+      ...(type === "pdc" ? { ValorFuente: "5V" } : {}),
     };
 
     countersRef.current[type]++;
