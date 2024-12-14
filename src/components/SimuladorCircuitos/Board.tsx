@@ -7,6 +7,7 @@ import {
 import "../../assets/css/SimuladorCircuitos/Board.css";
 import { SideBar } from "./Sidebar";
 import { ElectronicComponent } from "./ElectronicComponent";
+import { Connection } from "../../utils/IconsElectronic";
 
 interface Component {
   id: string;
@@ -80,6 +81,9 @@ export function Board() {
             ))}
           </SortableContext>
           <button onClick={() =>console.log(components)}>Ver components</button>
+          <div className="board__connection">
+            <Connection/>
+          </div>
         </div>
         <aside className="board__aside">
           <SideBar addComponents={handleAddComponent} />
