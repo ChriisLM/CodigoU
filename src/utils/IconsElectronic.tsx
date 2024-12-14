@@ -245,3 +245,24 @@ export function Voltmeter(props: Props) {
     </svg>
   );
 }
+
+
+export function Connection (props: Props) {
+  return (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    stroke="black"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    className="icon icon-tabler icons-tabler-outline icon-tabler-plug-connected"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="m7 12 5 5-1.5 1.5a3.536 3.536 0 1 1-5-5L7 12zM17 12l-5-5 1.5-1.5a3.536 3.536 0 1 1 5 5L17 12zM3 21l2.5-2.5M18.5 5.5 21 3M10 11l-2 2M13 14l-2 2" />
+  </svg>
+  );
+};
