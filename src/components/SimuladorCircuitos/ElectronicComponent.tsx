@@ -6,6 +6,7 @@ interface Props {
   inBoard: boolean;
   style?: React.CSSProperties;
   id?: string;
+  boardRef?: React.RefObject<HTMLDivElement>;
   onConnectorClick?: (data: {
     id: string;
     positionX: number;
@@ -19,22 +20,27 @@ export function ElectronicComponent({
   inBoard,
   style,
   id = "",
+  boardRef,
   onConnectorClick,
 }: Props) {
   const handleConnectorClick = (e: React.MouseEvent<HTMLSpanElement>) => {
-    if (onConnectorClick) {
-      // Obtener las coordenadas del conector
-      const rect = e.currentTarget.getBoundingClientRect();
-      const positionX = rect.x + rect.width / 2; // Centro del conector en X
-      const positionY = rect.y + rect.height / 2; // Centro del conector en Y
-      console.log("aqui llegue conecttor", positionX, positionY);
+    if (boardRef) {
+      const spanRect = e.currentTarget.getBoundingClientRect();
+      const boardRect = boardRef.current?.getBoundingClientRect();
+      if (boardRect) {
+        const positionX = spanRect.x + spanRect.width / 2 - boardRect.x;
+        const positionY = spanRect.y + spanRect.height / 2 - boardRect.y;
+        if (onConnectorClick) {
       
-      // Pasar los datos al callback
-      onConnectorClick({
-        id,
-        positionX,
-        positionY,
-      });
+          console.log("aqui llegue conecttor", positionX, positionY);
+  
+          onConnectorClick({
+            id,
+            positionX,
+            positionY,
+          });
+        }
+      }
     }
   };
 
@@ -46,15 +52,18 @@ export function ElectronicComponent({
         inBoard ? "electronic-component--board" : ""
       }`}
     >
-      <span
-        className="conector__line conector__line--left"
-        onClick={(e) => handleConnectorClick(e)}
-      ></span>
+      <div className="conector__line-container" onClick={(e) => handleConnectorClick(e)}>
+        <span
+          className="conector__line conector__line--left"
+        ></span>
+      </div>
       <Component />
-      <span
-        className="conector__line conector__line--right"
-        onClick={(e) => handleConnectorClick(e)}
-      ></span>
+      <div className="conector__line-container" onClick={(e) => handleConnectorClick(e)}>
+        <span
+          className="conector__line conector__line--right"
+          
+        ></span>
+      </div>
     </div>
   );
 }
