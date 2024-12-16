@@ -15,10 +15,21 @@ interface Component {
   Component: React.ElementType;
   x: number;
   y: number;
-  valorResitencia?: string
-  valorFuente?: string
-  ValorVoltaje?: string
-  ValorCorriente?: string
+  valorResitencia?: string;
+  valorFuente?: string;
+  ValorVoltaje?: string;
+  ValorCorriente?: string;
+}
+
+type Connection = {
+  id: string;
+  positionX: number;
+  positionY: number;
+};
+
+interface ConnectionData {
+  from: Connection;
+  to: Connection;
 }
 
 const initialComponents: Component[] = [];
@@ -26,6 +37,9 @@ const initialComponents: Component[] = [];
 export function Board() {
   const [components, setComponents] = useState<Component[]>(initialComponents);
   const countersRef = useRef<Record<string, number>>({});
+  const [connections, setConnections] = useState<ConnectionData[]>([]);
+  const [selectedConnector, setSelectedConnector] = useState<Connection[]>([]);
+  const boardRef = useRef<HTMLDivElement>(null);
 
   const handleAddComponent = (type: string, Component: React.ElementType) => {
     if (!countersRef.current[type]) {
@@ -62,8 +76,44 @@ export function Board() {
     );
   };
 
+  const handleInfoConnector = ({ id, positionX, positionY }: Connection) => {
+    console.log("Informacion llego aqui1");
+    
+    const connectionData: Connection = { id, positionX, positionY };
+    setSelectedConnector((prev) => {
+      if (prev.length === 1) {
+        console.log("Informacion llego aqui2");
+        handleConnections(prev[0], connectionData);
+        return [];
+      } else {
+        console.log("Informacion llego aqui3");
+        return [connectionData];
+      }
+    });
+  };
+
+  const handleConnections = (
+    connectionFrom: Connection,
+    connectionTo: Connection
+  ) => {
+    const isDuplicate = connections.some(
+      (connec) =>
+        (connec.from.id === connectionFrom.id &&
+          connec.to.id === connectionTo.id) ||
+        (connec.from.id === connectionTo.id &&
+          connec.to.id === connectionFrom.id)
+    );
+
+    if (!isDuplicate) {
+      setConnections((prev) => [
+        ...prev,
+        { from: connectionFrom, to: connectionTo },
+      ]);
+    }
+  };
+
   return (
-    <section className="board">
+    <section className="board" ref={boardRef}>
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
         <div className="board__container">
           <SortableContext
@@ -77,12 +127,33 @@ export function Board() {
                 Component={component.Component}
                 positionX={component.x}
                 positionY={component.y}
+                onConnectorClick={handleInfoConnector}
+                boardRef={boardRef}
               />
             ))}
           </SortableContext>
-          <button onClick={() =>console.log(components)}>Ver components</button>
+          <button onClick={() => console.log(components)}>
+            Ver components
+          </button>
+          <button onClick={() => console.log(connections)}>
+            Ver conecciones
+          </button>
+          <svg className="connections-layer">
+            {connections.map((connection, index) => (
+              <line
+                key={index}
+                x1={connection.from.positionX}
+                y1={connection.from.positionY}
+                x2={connection.to.positionX}
+                y2={connection.to.positionY}
+                stroke="black"
+                fill="black"
+                strokeWidth="2"
+              />
+            ))}
+          </svg>
           <div className="board__connection">
-            <Connection/>
+            <Connection />
           </div>
         </div>
         <aside className="board__aside">
@@ -98,11 +169,15 @@ function DraggableComponent({
   Component,
   positionX,
   positionY,
+  boardRef,
+  onConnectorClick,
 }: {
   id: string;
   Component: React.ElementType;
   positionX: number;
   positionY: number;
+  boardRef: React.RefObject<HTMLDivElement>;
+  onConnectorClick: (conection: Connection) => void;
 }) {
   const { attributes, listeners, setNodeRef, transform } = useDraggable({ id });
 
@@ -116,7 +191,13 @@ function DraggableComponent({
 
   return (
     <div ref={setNodeRef} style={style} {...attributes} {...listeners}>
-      <ElectronicComponent Component={Component} inBoard={true} />
+      <ElectronicComponent
+        id={id}
+        Component={Component}
+        inBoard={true}
+        onConnectorClick={onConnectorClick}
+        boardRef={boardRef}
+      />
     </div>
   );
 }
