@@ -28,7 +28,7 @@ export function ElectronicComponent({
       const spanRect = e.currentTarget.getBoundingClientRect();
       const boardRect = boardRef.current?.getBoundingClientRect();
       if (boardRect) {
-        const positionX = (spanRect.x - spanRect.width*6.5) - boardRect.x;
+        const positionX = (spanRect.x - (spanRect.width/2)) + 14 - boardRect.x;
         const positionY = (spanRect.y - (spanRect.height / 2)) - boardRect.y;
         if (onConnectorClick) {
       
