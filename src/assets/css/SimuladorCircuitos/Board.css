@@ -13,9 +13,10 @@
   background-image: url(/src/assets/img/board-background.png);
   aspect-ratio: 16 / 9;
   margin: 0 auto;
+  overflow: hidden;
 }
 
-.board__connection {
+.board__connection-button {
   position: absolute;
   top: 10px;
   right: 10px;
@@ -28,5 +29,9 @@
 
 .connections-layer{
   width: 100%;
-  height: 90%;
+  height: 100%;
+}
+
+.button--prubas{
+  position: absolute;
 }

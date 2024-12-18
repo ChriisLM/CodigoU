@@ -62,19 +62,33 @@ export function Board() {
 
   const handleDragEnd = (event: any) => {
     const { active, delta } = event;
-
+    
+    const boardRect = boardRef.current?.getBoundingClientRect();
+  
+    if (!boardRect) return;
+  
     setComponents((prev) =>
-      prev.map((component) =>
-        component.id === active.id
-          ? {
-              ...component,
-              x: component.x + delta.x,
-              y: component.y + delta.y,
-            }
-          : component
-      )
+      prev.map((component) => {
+        if (component.id === active.id) {
+
+          let newX = component.x + delta.x;
+          let newY = component.y + delta.y;
+  
+          newX = Math.max(0, Math.min(newX, boardRect.width - 150));
+          newY = Math.max(0, Math.min(newY, boardRect.height - 150));
+  
+          return {
+            ...component,
+            x: newX,
+            y: newY,
+          };
+        }
+        return component;
+      })
     );
   };
+
+  
 
   const handleInfoConnector = ({ id, positionX, positionY }: Connection) => {
     console.log("Informacion llego aqui1");
@@ -113,9 +127,9 @@ export function Board() {
   };
 
   return (
-    <section className="board" ref={boardRef}>
+    <section className="board" >
       <DndContext collisionDetection={closestCenter} onDragEnd={handleDragEnd}>
-        <div className="board__container">
+        <div className="board__container" ref={boardRef}>
           <SortableContext
             items={components.map((comp) => comp.id)}
             strategy={verticalListSortingStrategy}
@@ -132,12 +146,14 @@ export function Board() {
               />
             ))}
           </SortableContext>
-          <button onClick={() => console.log(components)}>
-            Ver components
-          </button>
-          <button onClick={() => console.log(connections)}>
-            Ver conecciones
-          </button>
+          <div className="button--prubas">
+            <button  onClick={() => console.log(components)}>
+              Ver components
+            </button>
+            <button onClick={() => console.log(connections)}>
+              Ver conecciones
+            </button>
+          </div>
           <svg className="connections-layer">
             {connections.map((connection, index) => (
               <line
@@ -152,7 +168,7 @@ export function Board() {
               />
             ))}
           </svg>
-          <div className="board__connection">
+          <div className="board__connection-button">
             <Connection />
           </div>
         </div>
