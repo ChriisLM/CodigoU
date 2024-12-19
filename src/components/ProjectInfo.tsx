@@ -22,6 +22,21 @@ export function ProjectInfo({ id }: Props) {
   useEffect(() => {
     setProject(proyectoslist.find((project) => project.id === id));
   }, []);
+
+  const parseDescription = (description: string) => {
+    const parts = description.split(/(<strong>.*?<\/strong>)/g);
+    return parts.map((part, index) => {
+      if (part.startsWith("<strong>") && part.endsWith("</strong>")) {
+        return (
+          <strong key={index}>
+            {part.replace("<strong>", "").replace("</strong>", "")}
+          </strong>
+        );
+      }
+      return part;
+    });
+  };
+
   return (
     <section className="projectInfo">
       {project ? (
@@ -35,7 +50,7 @@ export function ProjectInfo({ id }: Props) {
               <span className="project__tag" key={etiqueta}>{etiqueta}</span>
             ))}
           </div>
-          <p className="projectInfo__description">{project.descripcion}</p>
+          <p className="projectInfo__description">{parseDescription(project.descripcion)}</p>
         </div>
       ) : (
         <p>Proyecto no encontrado</p>
