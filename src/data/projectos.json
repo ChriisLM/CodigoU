@@ -7,7 +7,7 @@
       "circuitos",
       "simulación"
     ],
-    "descripcion": "Simulación basico de circuitos ",
+    "descripcion": "Este proyecto está diseñado como una herramienta para aprender desarrollo de interfaces interactivas en React Se enfoca principalmente en el uso del <strong> Drag and Drop </strong> para la manipulación de componentes en un tablero virtual, permitiendo al usuario posicionar, conectar y gestionar elementos dentro de un entorno dinámico.",
     "imagen": "circuito_rc.png"
   },
   {
