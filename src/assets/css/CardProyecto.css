@@ -36,11 +36,12 @@
 
 .project__tag{
   font-size: 13px;
-  background-color: limegreen;
-  border-radius: 18px;
-  border: 1px solid darkgreen;
+  background-color: transparent;
+  border-radius: 8px;
+  border: 2px solid white;
   padding: .2rem .8rem;
-  text-transform: lowercase;
+  text-transform: capitalize;
+  color: white;
 }
 
 .project__description{
