@@ -8,19 +8,19 @@
       "simulación"
     ],
     "descripcion": "Este proyecto está diseñado como una herramienta para aprender desarrollo de interfaces interactivas en React Se enfoca principalmente en el uso del <strong> Drag and Drop </strong> para la manipulación de componentes en un tablero virtual, permitiendo al usuario posicionar, conectar y gestionar elementos dentro de un entorno dinámico.",
-    "imagen": "circuito_rc.png"
+    "imagen": "simulador.png"
   },
   {
     "id": "CE-2",
     "materia": "Circuitos Eléctricos",
-    "nombre": "Diseño de un filtro pasabajos",
+    "nombre": "Calculadora de Resistencia Equivalente",
     "etiquetas": [
-      "filtros",
-      "diseño",
-      "MATLAB"
+      "calculadora",
+      "resistencia",
+      "componentes"
     ],
     "descripcion": "Diseño de un filtro pasabajos utilizando MATLAB",
-    "imagen": "filtro_pasabajos.png"
+    "imagen": "calculadoraResistencia.png"
   },
   {
     "id": "SS-1",
