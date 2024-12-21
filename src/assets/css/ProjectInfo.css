@@ -1,15 +1,16 @@
 .projectInfo {
   width: 100%;
+  padding-inline: 3.5em;
+  margin-bottom: 4rem;
 }
 
 .projectInfo__container {
-  padding-inline: 1em;
 }
 
 .projectInfo__data {
   display: flex;
   justify-content: space-between;
-  padding-right: 10%;
+  padding-right: 3%;
   align-items: center;
   margin-bottom: 1rem;
 }
@@ -20,15 +21,15 @@
 
 .projectInfo__materia {
   font-size: 1.1rem;
-  border-bottom: 1px solid;
+  font-style: italic;
 }
 
 .projectInfo__tags {
   display: flex;
   gap: 0.5rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.5rem;
 }
 
 .projectInfo__description {
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 }

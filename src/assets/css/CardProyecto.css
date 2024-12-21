@@ -38,7 +38,7 @@
   font-size: 13px;
   background-color: transparent;
   border-radius: 8px;
-  border: 2px solid white;
+  border: 2px solid var(--color-secundary);
   padding: .2rem .8rem;
   text-transform: capitalize;
   color: white;
