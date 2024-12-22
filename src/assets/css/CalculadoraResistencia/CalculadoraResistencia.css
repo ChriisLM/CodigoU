@@ -1,0 +1,40 @@
+.cal-resistor{
+  padding-inline: 3.5rem;
+}
+
+.cal-resistor__tabs{
+  display: flex;
+  align-items: center;
+  list-style: none;
+  background-color: var(--background-color-tertiary);
+  border-radius: 12px;
+  padding: .2rem 0;
+  width: 60%;
+  margin: 0 auto;
+  box-shadow: 0px 10px 20px -3px rgba(0, 0, 0, 0.3);
+  position: relative;
+}
+
+.cal-resistor__tabs-items{
+  cursor: pointer;
+  z-index: 2;
+  width: 33.3%;
+  display: flex;
+  justify-content: center;
+  font-weight: 500;
+}
+
+.cal-resistor__indicator{
+  position: absolute;
+  z-index: 1;
+  background-color: #7425CF;
+  border-radius: 12px;
+  transition: 0.25s ease-out;
+  box-shadow: 0px 10px 20px -3px #7425CF;
+  height: 100%;
+  width: 33.3%;
+}
+
+.cal-resistor__tabs-items--active{
+
+}
