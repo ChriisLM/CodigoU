@@ -1,0 +1,47 @@
+.resistorInput{
+  display: grid;
+  grid-template-areas:
+      "title title"
+      "button input";
+  grid-template-columns: repeat(6, 50px);
+  grid-template-rows: 30px 50px;
+  align-items: center;
+  justify-items: center;
+}
+
+.resistorInput__title{
+  grid-area: title;
+  grid-column: 2 / 3;
+  justify-self: flex-start;
+  align-self: end;
+}
+
+.resistorInput__deleteSection{
+  grid-area: button;
+  grid-column: 1 / 2;
+  padding-top: .25rem;
+  align-self: start;
+}
+
+.resistorInput__inputSection{
+  grid-area: input;
+  grid-column: 2 / 7;
+  height: 100%;
+  justify-self: flex-start;
+  padding-top: .2rem;
+}
+
+.resistorInput__input{
+  width: 75%;
+  height: 50%;
+  outline: none;
+}
+
+.resistorInput__selector{
+  height: 50%;
+  outline: none;
+}
+
+.resistorInput__selector-option{
+
+}
