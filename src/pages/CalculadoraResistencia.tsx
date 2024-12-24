@@ -2,6 +2,7 @@ import { Header } from "../components/Header";
 import { ProjectInfo } from "../components/ProjectInfo";
 import "../assets/css/CalculadoraResistencia/CalculadoraResistencia.css"
 import { useRef, useState } from "react";
+import { ResistorCalculatorLayout } from "../components/CalculadoraResistencia/ResistorCalculatorLayout";
 
 export function CalculadorResistenica () {
   const [activeTab, setActiveTab] = useState<number>(0)
@@ -25,9 +26,9 @@ export function CalculadorResistenica () {
             <li className={activeTab==2 ? "cal-resistor__tabs-items--active cal-resistor__tabs-items" : "cal-resistor__tabs-items"} onClick={() => handleActiveTab(2)}>Valor de Resistencia</li>
             <span ref={indicatorRef} className="cal-resistor__indicator"></span>
           </ul>
-          {activeTab==0 && <div>1</div>}
-          {activeTab==1 && <div>2</div>}
-          {activeTab==2 && <div>3</div>}
+          {activeTab==0 && <ResistorCalculatorLayout typeCalculator={"serie"}/>}
+          {activeTab==1 && <ResistorCalculatorLayout typeCalculator={"paralelo"}/>}
+          {activeTab==2 && <span>color</span>}
         </section>
       </main>
     </>
