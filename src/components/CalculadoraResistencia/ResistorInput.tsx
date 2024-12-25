@@ -2,15 +2,17 @@ import "../../assets/css/CalculadoraResistencia/ResistorInput.css"
 
 interface Props {
   resistencia: string;
-  deleteInput: boolean;
+  deleteInputButton: boolean;
+  deleteInput?: (resistenciaRef: string) => void
 }
 
-export function ResistorInput ({resistencia,deleteInput}: Props) {
+export function ResistorInput ({resistencia,deleteInputButton,deleteInput}: Props) {
+
   return (
     <div className="resistorInput">
       <span className="resistorInput__title">{resistencia}</span>
       <div className="resistorInput__deleteSection">
-        {deleteInput ? <span>❌</span>:<span></span>}
+        {deleteInputButton && <span onClick={() => deleteInput?.(resistencia)}>❌</span>}
       </div>
       <div className="resistorInput__inputSection">
         <input type="number" className="resistorInput__input"/>
