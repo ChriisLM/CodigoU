@@ -62,3 +62,45 @@ export function SearchIcon(props: Props) {
     </svg>
   );
 }
+
+
+export function RemoveIcon (props: Props) {
+  return (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    className="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-x"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M8.56 3.69a9 9 0 0 0-2.92 1.95M3.69 8.56A9 9 0 0 0 3 12M3.69 15.44a9 9 0 0 0 1.95 2.92M8.56 20.31A9 9 0 0 0 12 21M15.44 20.31a9 9 0 0 0 2.92-1.95M20.31 15.44A9 9 0 0 0 21 12M20.31 8.56a9 9 0 0 0-1.95-2.92M15.44 3.69A9 9 0 0 0 12 3M14 14l-4-4M10 14l4-4" />
+  </svg>
+  );
+};
+
+
+export function AddIcon (props: Props) {
+  return (
+    <svg
+    xmlns="http://www.w3.org/2000/svg"
+    width={24}
+    height={24}
+    fill="none"
+    stroke="currentColor"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+    strokeWidth={2}
+    className="icon icon-tabler icons-tabler-outline icon-tabler-circle-dashed-plus"
+    {...props}
+  >
+    <path stroke="none" d="M0 0h24v24H0z" />
+    <path d="M8.56 3.69a9 9 0 0 0-2.92 1.95M3.69 8.56A9 9 0 0 0 3 12M3.69 15.44a9 9 0 0 0 1.95 2.92M8.56 20.31A9 9 0 0 0 12 21M15.44 20.31a9 9 0 0 0 2.92-1.95M20.31 15.44A9 9 0 0 0 21 12M20.31 8.56a9 9 0 0 0-1.95-2.92M15.44 3.69A9 9 0 0 0 12 3M9 12h6M12 9v6" />
+  </svg>
+  );
+};
