@@ -1,4 +1,5 @@
 import "../../assets/css/CalculadoraResistencia/ResistorInput.css"
+import { RemoveIcon } from "../../utils/Icons";
 
 interface Props {
   resistencia: string;
@@ -12,14 +13,14 @@ export function ResistorInput ({resistencia,deleteInputButton,deleteInput}: Prop
     <div className="resistorInput">
       <span className="resistorInput__title">{resistencia}</span>
       <div className="resistorInput__deleteSection">
-        {deleteInputButton && <span onClick={() => deleteInput?.(resistencia)}>❌</span>}
+        {deleteInputButton && <RemoveIcon className="resistorInput__button-remove" onClick={() => deleteInput?.(resistencia)}/>}
       </div>
       <div className="resistorInput__inputSection">
         <input type="number" className="resistorInput__input"/>
         <select name="resistor" id="resistor" className="resistorInput__selector">
-          <option value="" className="resistorInput__selector-option">Ω</option>
-          <option value="" className="resistorInput__selector-option">kΩ</option>
-          <option value="" className="resistorInput__selector-option">MΩ</option>
+          <option value="Ω">Ω</option>
+          <option value="kΩ">kΩ</option>
+          <option value="MΩ">MΩ</option>
         </select>
       </div>
     </div>
