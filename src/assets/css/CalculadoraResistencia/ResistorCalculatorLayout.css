@@ -1,0 +1,87 @@
+.rCalculator-layout {
+  margin: 0 auto;
+  margin-block: 4rem;
+  display: flex;
+  width: 80%;
+  background-color: var(--background-color-tertiary);
+  padding: 1.5rem;
+  border-radius: 20px;
+}
+
+.rCalculator-layout__aside {
+  width: 30%;
+}
+
+.rCalculator-layout__aside-title {
+  font-weight: 500;
+  padding-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.rCalculator-layout__inputs {
+}
+
+.rCalculator-layout__button-add {
+  display: flex;
+  margin: 0 auto;
+  cursor: pointer;
+  stroke: greenyellow;
+}
+
+.rCalculator-layout__container {
+  width: 70%;
+  margin-inline: 4rem;
+  height: fit-content;
+}
+
+.rCalculator-layout__container-image {
+  background-image: url(/src/assets/img/fondoPuntos.png);
+  background-size: contain;
+  border-radius: 10px;
+  border: 1px solid white;
+  height: 300px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  padding-inline: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.rCalculator-layout__image {
+  width: 100%;
+}
+
+.rCalculator-layout__results {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-items: center;
+}
+
+.rCalculator-layout__results-info {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 2rem;
+}
+
+.rCalculator-layout__results-title {
+  font-size: 18px;
+}
+
+.rCalculator-layout__results-value {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.rCalculator-layout__results-action {
+  background-color: darkslategray;
+  border-radius: 12px;
+  outline: none;
+  width: fit-content;
+  padding: .5rem 2rem;
+  border: 1px solid gray;
+  font-weight: bold;
+  font-size: 14px;
+  color: white;
+  margin: 0 auto;
+}
