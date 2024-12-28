@@ -32,6 +32,7 @@
   width: 70%;
   margin-inline: 4rem;
   height: fit-content;
+  margin-top: 2.5rem;
 }
 
 .rCalculator-layout__container-image {
@@ -60,28 +61,18 @@
 
 .rCalculator-layout__results-info {
   display: flex;
-  justify-content: space-around;
   margin-bottom: 2rem;
+  align-items: center;
+  gap: 1rem;
 }
 
 .rCalculator-layout__results-title {
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
 }
 
 .rCalculator-layout__results-value {
-  font-size: 14px;
+  font-size: 20px;
   font-weight: bold;
 }
 
-.rCalculator-layout__results-action {
-  background-color: darkslategray;
-  border-radius: 12px;
-  outline: none;
-  width: fit-content;
-  padding: .5rem 2rem;
-  border: 1px solid gray;
-  font-weight: bold;
-  font-size: 14px;
-  color: white;
-  margin: 0 auto;
-}
