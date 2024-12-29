@@ -3,6 +3,7 @@ import { ProjectInfo } from "../components/ProjectInfo";
 import "../assets/css/CalculadoraResistencia/CalculadoraResistencia.css"
 import { useRef, useState } from "react";
 import { ResistorCalculatorLayout } from "../components/CalculadoraResistencia/ResistorCalculatorLayout";
+import { ResistorColorLayout } from "../components/CalculadoraResistencia/ResistorColorLayout";
 
 export function CalculadorResistenica () {
   const [activeTab, setActiveTab] = useState<number>(0)
@@ -28,7 +29,7 @@ export function CalculadorResistenica () {
           </ul>
           {activeTab==0 && <ResistorCalculatorLayout typeCalculator={"serie"}/>}
           {activeTab==1 && <ResistorCalculatorLayout typeCalculator={"paralelo"}/>}
-          {activeTab==2 && <span>color</span>}
+          {activeTab==2 && <ResistorColorLayout/>}
         </section>
       </main>
     </>
